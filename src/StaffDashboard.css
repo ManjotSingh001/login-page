@@ -1,125 +1,144 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Inter";
+  background-image: url("images/bg.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed;
+}
+
+/* Navigation */
+
+.staff-dashboard .nav-container {
+  background: #303030;
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.57);
+  height: 50px;
+}
+
+.staff-dashboard .wrapper {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.staff-dashboard nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  margin: auto 15%;
   
-  body {
-    background-color: #fff;
-    font-family: "Inter";
-    /* background-image: url("images/bg.png"); */
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-attachment: fixed;
-  }
-  
-  /* Navigation */
-  
-  .staff-dashboard .nav-container {
-    background: #303030;
-    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.57);
-    height: 50px;
-  }
-  
-  .staff-dashboard .wrapper {
-    width: 1920px;
-    margin: 0 auto;
-  }
-  
-  .staff-dashboard nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    margin: auto 15%;
-  }
-  
-  .staff-dashboard nav ul {
-    display: flex;
-  }
-  
-  .staff-dashboard .nav-items li {
-    list-style: none;
-    /* margin-right: 130px; */
-    margin-left: 160px;
-    justify-content: space-between;
-    margin-top: 12px;
-  }
-  
-  .staff-dashboard .nav-items li a {
-    color: #ffffff;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  /* Header */
-  
-  .staff-dashboard .header-container {
-    height: calc(101.45vh - 72px);
-    display: flex;
-    align-items: center;
-  }
-  
-  .staff-dashboard header {
-    margin-left: 0%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    width: 380px;
-    height: 700px;
-    margin-top: 1px;
-    margin-left: 190px;
-    /* padding: 6px; */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
-    border-radius: 15px;
-  }
-  
-  .staff-dashboard header h1 {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    text-align: center;
-    color: #303030;
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-  
-  .staff-dashboard header h2 {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    color: #303030;
-    margin-bottom: 20px;
-  }
-  
-  .staff-dashboard header a {
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #d9d9d9;
-    text-decoration: none;
-    background: #303030;
-    padding: 12px;
-    width: 302px;
-    height: 44px;
-    display: inline-block;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-  
-  .staff-dashboard .hero-content {
-    text-align: center;
-    margin-left: -60px;
-  }
-  
+}
+
+.staff-dashboard nav ul {
+  display: flex;
+}
+
+.staff-dashboard .nav-items li {
+  list-style: none;
+  margin-right: 140px;
+  margin-left: 40px;
+  justify-content: space-between;
+  margin-top: 17px;
+}
+
+.staff-dashboard .nav-items li a {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Header */
+
+.staff-dashboard .header-container {
+  height: calc(101.45vh - 72px);
+  display: flex;
+  align-items: center;
+}
+
+.staff-dashboard header {
+  /* margin-left: 10%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 380px;
+  height: 650px;
+  margin-top: 1px;
+  margin-left: 230px;
+  /* padding: 50px; */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+  border-radius: 15px;
+}
+
+.staff-dashboard header h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #303030;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/*.staff-dashboard header h2 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #303030;
+  margin-bottom: 20px;
+}*/
+
+.staff-dashboard header a {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #d9d9d9;
+  text-decoration: none;
+  background: #303030;
+  padding: 12px;
+  width: 302px;
+  height: 44px;
+  display: inline-block;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.staff-dashboard .hero-content {
+  text-align: center;
+  align-items: center;
+  margin-left: -63px;
+}
+
+
+/* Add position fixed and width 100% to the .nav-container */
+.nav-container {
+background: #303030;
+box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.57);
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+width: 100%;
+z-index: 9999;
+}
+
+/* Add padding-top equal to the height of the navbar to the .header-container */
+.header-container {
+padding-top: 50px;
+}

@@ -30,7 +30,7 @@ function LoginForm() {
           if (role === 'advisor') {
             window.location.href = 'https://gndec.ac.in/';
           } else if (role === 'student') {
-            window.location.href = 'https://it.gndec.ac.in/';
+            navigate('/student-dashboard');
             
           } 
           else if (role === 'staff') {
