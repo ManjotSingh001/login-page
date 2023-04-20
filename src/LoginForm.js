@@ -28,7 +28,7 @@ function LoginForm() {
           const { role } = response.data;
   
           if (role === 'advisor') {
-            window.location.href = 'https://gndec.ac.in/';
+            window.location.href = '/advisor-dashboard';
           } else if (role === 'student') {
             navigate('/student-dashboard');
             

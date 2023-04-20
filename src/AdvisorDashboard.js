@@ -1,9 +1,9 @@
 import React from 'react';
-import './StudentDashboard.css';
+import './AdvisorDashboard.css';
 
-const StudentDashboard = () => {
+const AdvisorDashboard = () => {
   return (
-    <div className="student-dashboard">
+    <div className="advisor-dashboard">
       <div className="nav-container">
         <div className="wrapper">
           <nav>
@@ -34,7 +34,9 @@ const StudentDashboard = () => {
             <div className="hero-content">
               <h1>Welcome</h1>
               {/* <h2>Manjot Singh</h2> */}
-              <a href="requests-ce.html">Generate Request</a>
+              <a href="requests-ce.html">Pending Request</a>
+              <a href="requests-ce.html">Approved requests</a>
+              <a href="requests-ce.html">Paused Request</a>
              
             </div>
             <div className="photo-bg"></div>
@@ -45,4 +47,4 @@ const StudentDashboard = () => {
   );
 };
 
-export default StudentDashboard;
+export default AdvisorDashboard;
