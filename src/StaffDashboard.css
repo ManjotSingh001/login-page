@@ -39,9 +39,10 @@
   
   .staff-dashboard .nav-items li {
     list-style: none;
-    margin-right: 140px;
-    margin-left: 40px;
+    /* margin-right: 130px; */
+    margin-left: 160px;
     justify-content: space-between;
+    margin-top: 12px;
   }
   
   .staff-dashboard .nav-items li a {
@@ -73,7 +74,7 @@
     height: 700px;
     margin-top: 1px;
     margin-left: 190px;
-    padding: 6px;
+    /* padding: 6px; */
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
     border-radius: 15px;
   }
@@ -84,7 +85,7 @@
     line-height: 48px;
     text-align: center;
     color: #303030;
-    margin-bottom: -10px;
+    margin-bottom: 10px;
     margin-top: 10px;
   }
   
@@ -119,6 +120,6 @@
   
   .staff-dashboard .hero-content {
     text-align: center;
-    margin-left: -70px;
+    margin-left: -60px;
   }
   
