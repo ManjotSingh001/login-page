@@ -21,7 +21,7 @@ const StudentDashboard = () => {
                 <a href="about.html"> ABOUT US</a>
               </li>
               <li>
-                <a href="logout.html"> LOGOUT</a>
+                <a href="/"> LOGOUT</a>
               </li>
             </ul>
           </nav>
