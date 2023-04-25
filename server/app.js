@@ -28,7 +28,8 @@ app.post('/login', (req, res) => {
       return;
     }
 
-    res.status(200).send({ role: user.role });
+    // Send the user role and user ID in the response
+    res.status(200).send({ role: user.role, id: user.id });
   });
 });
 

@@ -1,4 +1,3 @@
-// src/LoginForm.js
 import './login.css';
 import React, { useState } from 'react';
 import axios from 'axios'; // Import axios to make API calls
@@ -19,24 +18,24 @@ function LoginForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
+
     axios
       .post('http://localhost:3001/login', { username, password })
       .then((response) => {
         if (response.status === 200) {
           // Successful login, redirect to the appropriate page based on the user's role
-          const { role } = response.data;
-  
+          const { role, id } = response.data;
+
+          // Store the user ID in the local storage
+          localStorage.setItem('userId', id);
+
           if (role === 'advisor') {
             window.location.href = '/advisor-dashboard';
           } else if (role === 'student') {
             navigate('/student-dashboard');
-            
-          } 
-          else if (role === 'staff') {
+          } else if (role === 'staff') {
             navigate('/staff-dashboard');
-            
-          }else {
+          } else {
             // Handle other roles or unknown roles here
             navigate('/default');
           }
@@ -50,8 +49,6 @@ function LoginForm() {
         }
       });
   };
-  
-  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -59,23 +56,23 @@ function LoginForm() {
       <h2>College no dues portal</h2>
 
       <label htmlFor="username">Username:</label>
-      <input 
-        type="text" 
-        id="username" 
-        name="username" 
+      <input
+        type="text"
+        id="username"
+        name="username"
         value={username}
         onChange={handleUsernameChange}
-        required 
+        required
       />
 
       <label htmlFor="password">Password:</label>
-      <input 
-        type="password" 
-        id="password" 
-        name="password" 
+      <input
+        type="password"
+        id="password"
+        name="password"
         value={password}
         onChange={handlePasswordChange}
-        required 
+        required
       />
 
       <div className="form-footer">
@@ -83,7 +80,7 @@ function LoginForm() {
           <input type="checkbox" id="remember-me" name="remember-me" />
           <label htmlFor="remember-me">Remember me</label>
         </div>
-        
+
         <a href="https://academics.gndec.ac.in/forgotpassword/" className="forgot-password">Forgot Password?</a>
       </div>
 

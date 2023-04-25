@@ -1,20 +1,31 @@
 [
     {
       "id": 1,
-      "username": "user1",
-      "password": "password1",
+      "username": "a1",
+      "password": "a1",
       "role": "advisor"
     },
     {
       "id": 2,
-      "username": "user2",
-      "password": "password2",
+      "username": "student2",
+      "password": "student2",
       "role": "student"
     },
     {
-        "id": 3,
-        "username": "user3",
-        "password": "password3",
+      "id": 3,
+      "username": "s3",
+      "password": "s3",
+      "role": "student"
+    },{
+      "id": 4,
+      "username": "s4",
+      "password": "s4",
+      "role": "student"
+    },
+    {
+        "id": 5,
+        "username": "st1",
+        "password": "st1",
         "role": "staff"
       }
     
