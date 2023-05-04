@@ -1,33 +1,41 @@
 [
-    {
-      "id": 1,
-      "username": "a1",
-      "password": "a1",
-      "role": "advisor"
-    },
-    {
-      "id": 2,
-      "username": "student2",
-      "password": "student2",
-      "role": "student"
-    },
-    {
-      "id": 3,
-      "username": "s3",
-      "password": "s3",
-      "role": "student"
-    },{
-      "id": 4,
-      "username": "s4",
-      "password": "s4",
-      "role": "student"
-    },
-    {
-        "id": 5,
-        "username": "st1",
-        "password": "st1",
-        "role": "staff"
-      }
-    
-  ]
-  
+  {
+    "id": 1,
+    "username": "a1",
+    "password": "a1",
+    "role": "advisor"
+  },
+  {
+    "id": 2,
+    "username": "s2",
+    "password": "s2",
+    "role": "student",
+    "father_name": "John Doe",
+    "URN": "1234",
+    "CRN": "5678"
+  },
+  {
+    "id": 3,
+    "username": "s3",
+    "password": "s3",
+    "role": "student",
+    "father_name": "Michael Smith",
+    "URN": "2345",
+    "CRN": "6789"
+  },
+  {
+    "id": 4,
+    "username": "s4",
+    "password": "s4",
+    "role": "student",
+    "father_name": "James Brown",
+    "URN": "3456",
+    "CRN": "7890"
+  },
+  {
+    "id": 5,
+    "username": "st1",
+    "password": "st1",
+    "role": "staff"
+  }
+]

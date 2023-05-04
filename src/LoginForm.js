@@ -1,6 +1,6 @@
 import './login.css';
 import React, { useState } from 'react';
-import axios from 'axios'; // Import axios to make API calls
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
@@ -23,11 +23,14 @@ function LoginForm() {
       .post('http://localhost:3001/login', { username, password })
       .then((response) => {
         if (response.status === 200) {
-          // Successful login, redirect to the appropriate page based on the user's role
-          const { role, id } = response.data;
+          const { role, id, father_name, URN, CRN } = response.data;
 
-          // Store the user ID in the local storage
+          // Store the user ID, role, and additional fields in the local storage
           localStorage.setItem('userId', id);
+          localStorage.setItem('userRole', role);
+          localStorage.setItem('father_name', father_name);
+          localStorage.setItem('URN', URN);
+          localStorage.setItem('CRN', CRN);
 
           if (role === 'advisor') {
             window.location.href = '/advisor-dashboard';
@@ -36,7 +39,6 @@ function LoginForm() {
           } else if (role === 'staff') {
             navigate('/staff-dashboard');
           } else {
-            // Handle other roles or unknown roles here
             navigate('/default');
           }
         }
