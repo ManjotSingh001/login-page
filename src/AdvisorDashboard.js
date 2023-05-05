@@ -13,7 +13,6 @@ const AdvisorDashboard = () => {
           <header>
             <div className="hero-content">
               <h1>Welcome</h1>
-              {/* <h2>Manjot Singh</h2> */}
               <Link to="/pending-requests">Pending Request</Link>
               <a href="requests-ce.html">Approved requests</a>
               <a href="requests-ce.html">Paused Request</a>
