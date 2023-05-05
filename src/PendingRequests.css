@@ -1,0 +1,47 @@
+.pending-requests {
+    padding: 2rem;
+    margin-top: 60px; /* Add a top margin to move the content below the nav bar */
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem; /* Add a margin below the h1 */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  
+  th,
+  td {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .button-action {
+    background-color: #303030;
+    color: #d9d9d9;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .button-action:hover {
+    background-color: #d9d9d9;
+    color: #303030;
+  }
+  

@@ -7,12 +7,6 @@
   margin: 0;
 }
 
-/* .login-form {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
-} */
 
 body {
   background-color: #fff;
@@ -23,7 +17,7 @@ body {
   background-attachment: fixed;
 }
 
-.advisor-dashboard .nav-container {
+/* .advisor-dashboard .nav-container {
     background: #303030;
     box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.57);
     height: 50px;
@@ -109,7 +103,7 @@ nav ul {
   line-height: 17px;
   text-decoration: none;
   text-align: center;
-}
+} */
 
 .advisor-dashboard .header-container {
     height: calc(101.45vh - 72px);
@@ -118,12 +112,6 @@ nav ul {
   }
   
 
-.advisor-dashboard .header-container {
-    height: calc(101.45vh - 72px);
-    display: flex;
-    align-items: center;
-  }
-  
   .advisor-dashboard header {
     /* margin-left: 10%; */
     display: flex;

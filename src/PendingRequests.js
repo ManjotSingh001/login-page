@@ -1,38 +1,58 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Navbar from './Navbar';
+import './PendingRequests.css';
 
 const PendingRequests = () => {
-  const [pendingRequests, setPendingRequests] = useState([]);
+  const [requests, setRequests] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:3001/api/data');
-        setPendingRequests(response.data);
-      } catch (err) {
-        console.error('Error fetching data:', err);
-      }
-    };
-
-    fetchData();
+    axios
+      .get('http://localhost:3001/api/data')
+      .then((response) => {
+        setRequests(response.data);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
   }, []);
 
   return (
-    <div>
+    <div className="pending-requests">
+      <Navbar />
       <h1>Pending Requests</h1>
-      <ul>
-        {pendingRequests.map((request, index) => (
-          <li key={index}>
-            <p>Student ID: {request.studentId}</p>
-            <p>Request Details: {request.requestDetails}</p>
-            <p>Father Name: {request.fatherName}</p>
-            <p>URN: {request.URN}</p>
-            <p>CRN: {request.CRN}</p>
-            <p>Created At: {new Date(request.createdAt).toLocaleString()}</p>
-            <hr />
-          </li>
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Request Details</th>
+            <th>Father Name</th>
+            <th>URN</th>
+            <th>CRN</th>
+            <th>Date</th>
+            <th>Select</th>
+          </tr>
+        </thead>
+        <tbody>
+          {requests.map((request) => (
+            <tr key={request._id}>
+              <td>{request.studentId}</td>
+              <td>{request.requestDetails}</td>
+              <td>{request.fatherName}</td>
+              <td>{request.URN}</td>
+              <td>{request.CRN}</td>
+              <td>{new Date(request.createdAt).toLocaleDateString()}</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div className="buttons-container">
+        <button className="button-action">Approve</button>
+        <button className="button-action">Reject</button>
+      </div>
     </div>
   );
 };

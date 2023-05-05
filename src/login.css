@@ -74,7 +74,7 @@ input[type="submit"] {
   background-color: #303030;
   color: #D9D9D9;
   border: none;
-   border-radius: 0px; 
+  border-radius: 0px; 
   cursor: pointer;
   font-weight: 400;
   font-size: 16px;
@@ -91,8 +91,9 @@ form label{
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  text-align: center;
+  text-align: left;
   color: #303030;
+  display: block;
 }
 
 .form-footer {
@@ -105,7 +106,10 @@ form label{
 .checkbox label {
   font-size: 14px;
 }
-
+.checkbox {
+  display: flex;
+  align-items: center;
+}
 .forgot-password {
   font-size: 14px;
   color: #303030;

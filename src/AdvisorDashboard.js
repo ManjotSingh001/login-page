@@ -1,33 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './AdvisorDashboard.css';
+import Navbar from './Navbar';
 
 const AdvisorDashboard = () => {
   return (
     <div className="advisor-dashboard">
-      <div className="nav-container">
-        <div className="wrapper">
-          <nav>
-            <ul className="nav-items">
-              <li>
-                <a href="/"> HOME</a>
-              </li>
-              <li>
-                <a href="https://www.gndec.ac.in/">COLLEGE WEBSITE</a>
-              </li>
-              <li>
-                <a href="contact.html"> CONTACT US</a>
-              </li>
-              <li>
-                <a href="about.html"> ABOUT US</a>
-              </li>
-              <li>
-                <a href="/"> LOGOUT</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+       <Navbar />
 
       <div className="header-container">
         <div className="wrapper">
