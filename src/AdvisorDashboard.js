@@ -14,8 +14,9 @@ const AdvisorDashboard = () => {
             <div className="hero-content">
               <h1>Welcome</h1>
               <Link to="/pending-requests">Pending Request</Link>
-              <a href="requests-ce.html">Approved requests</a>
-              <a href="requests-ce.html">Paused Request</a>
+              <Link to="/approved-requests">Approved Request</Link>
+              <Link to="/paused-requests">Paused Request</Link>
+              
              
             </div>
             <div className="photo-bg"></div>

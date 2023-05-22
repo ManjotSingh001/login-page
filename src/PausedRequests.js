@@ -78,12 +78,13 @@ const PausedRequests = () => {
       <h1><b>Paused Requests</b></h1>
       <table>
       <thead>
-  <tr>
+      <tr>
     <th>Select</th>
     <th>Student ID</th>
     <th>Father Name</th>
     <th>URN</th>
     <th>CRN</th>
+    <th>department</th>
     <th>Date</th>
   </tr>
 </thead>
@@ -100,6 +101,7 @@ const PausedRequests = () => {
       <td>{request.fatherName}</td>
       <td>{request.URN}</td>
       <td>{request.CRN}</td>
+      <td>{request.department}</td>
       <td>{new Date(request.createdAt).toLocaleDateString()}</td>
     </tr>
          ))}

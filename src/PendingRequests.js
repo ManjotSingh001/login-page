@@ -83,8 +83,9 @@ const PendingRequests = () => {
             <th>Father Name</th>
             <th>URN</th>
             <th>CRN</th>
+            <th>department</th>
             <th>Date</th>
-            
+
           </tr>
         </thead>
         <tbody>
@@ -100,6 +101,7 @@ const PendingRequests = () => {
               <td>{request.fatherName}</td>
               <td>{request.URN}</td>
               <td>{request.CRN}</td>
+              <td>{request.department}</td>
               <td>{new Date(request.createdAt).toLocaleDateString()}</td>
             </tr>
           ))}

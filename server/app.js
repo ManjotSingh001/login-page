@@ -48,7 +48,8 @@ app.post('/login', (req, res) => {
       id: user.id,
       father_name: user.father_name,
       URN: user.URN,
-      CRN: user.CRN
+      CRN: user.CRN,
+      department: user.department
     });
   });
 });
@@ -64,7 +65,7 @@ app.get('/api/data', async (req, res) => {
   }
 });
 app.post('/api/generate-request', async (req, res) => {
-  const { studentId, requestDetails, fatherName, URN, CRN } = req.body;
+  const { studentId, requestDetails, fatherName, URN, CRN, department } = req.body;
 
   try {
     const collection = client.db('req').collection('pending');
@@ -74,7 +75,8 @@ app.post('/api/generate-request', async (req, res) => {
       fatherName,
       URN,
       CRN,
-      status: 'pending',
+      department,
+      status: 'pending', // Set the status field to "pending"
       createdAt: new Date(),
     });
 

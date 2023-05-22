@@ -20,20 +20,22 @@ function LoginForm() {
     event.preventDefault();
 
     axios
-      .post('http://localhost:3001/login', { username, password })
-      .then((response) => {
-        if (response.status === 200) {
-          const { role, id, father_name, URN, CRN } = response.data;
+    .post('http://localhost:3001/login', { username, password })
+    .then((response) => {
+      if (response.status === 200) {
+        const { role, id, father_name, URN, CRN, department} = response.data;
 
-          // Store the user ID, role, and additional fields in the local storage
-          localStorage.setItem('userId', id);
-          localStorage.setItem('userRole', role);
-          localStorage.setItem('father_name', father_name);
-          localStorage.setItem('URN', URN);
-          localStorage.setItem('CRN', CRN);
+        // Store the user ID, role, and additional fields in the local storage
+        localStorage.setItem('userId', id);
+        localStorage.setItem('userRole', role);
+        localStorage.setItem('father_name', father_name);
+        localStorage.setItem('department', department);
+        localStorage.setItem('URN', URN);
+        localStorage.setItem('CRN', CRN);
 
           if (role === 'advisor') {
-            window.location.href = '/advisor-dashboard';
+            // window.location.href = '/advisor-dashboard';
+            navigate('/advisor-dashboard');
           } else if (role === 'student') {
             navigate('/student-dashboard');
           } else if (role === 'staff') {

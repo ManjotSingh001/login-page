@@ -3,7 +3,15 @@
     "id": 1,
     "username": "a1",
     "password": "a1",
-    "role": "advisor"
+    "role": "advisor",
+    "department": "CSE"
+  },
+  {
+    "id": 6,
+    "username": "a2",
+    "password": "a2",
+    "role": "advisor",
+    "department": "IT"
   },
   {
     "id": 2,
@@ -12,7 +20,8 @@
     "role": "student",
     "father_name": "John Doe",
     "URN": "1234",
-    "CRN": "5678"
+    "CRN": "5678",
+    "department": "IT"
   },
   {
     "id": 3,
@@ -21,7 +30,8 @@
     "role": "student",
     "father_name": "Michael Smith",
     "URN": "2345",
-    "CRN": "6789"
+    "CRN": "6789",
+    "department": "MBA"
   },
   {
     "id": 4,
@@ -30,12 +40,14 @@
     "role": "student",
     "father_name": "James Brown",
     "URN": "3456",
-    "CRN": "7890"
+    "CRN": "7890",
+    "department": "CE"
   },
   {
     "id": 5,
     "username": "st1",
     "password": "st1",
-    "role": "staff"
+    "role": "staff",
+    "department": "CSE"
   }
 ]

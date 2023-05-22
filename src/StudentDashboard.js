@@ -10,7 +10,18 @@ const StudentDashboard = () => {
     const fatherName = localStorage.getItem('father_name');
     const URN = localStorage.getItem('URN');
     const CRN = localStorage.getItem('CRN');
-    const requestDetails = 'Example request details';
+    const department = localStorage.getItem('department');
+      const requestDetails = 'Example request details';
+      console.log('Sending request data:', {
+        studentId,
+        requestDetails,
+        fatherName,
+        URN,
+        CRN,
+        department,
+      });
+
+
 
     try {
       const response = await axios.post('http://localhost:3001/api/generate-request', {
@@ -19,8 +30,9 @@ const StudentDashboard = () => {
         fatherName,
         URN,
         CRN,
+        department, // Include department in the request data
       });
-      
+
       console.log(response.data);
       alert('Request generated successfully');
     } catch (error) {
