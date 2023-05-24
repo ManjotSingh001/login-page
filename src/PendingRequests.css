@@ -30,7 +30,7 @@
     transform: translateX(-50%);
   }
   
-  .button-action {
+  .actions button {
     background-color: #303030;
     color: #d9d9d9;
     border: none;
@@ -40,8 +40,7 @@
     cursor: pointer;
   }
   
-  .button-action:hover {
+  .actions button:hover {
     background-color: #d9d9d9;
     color: #303030;
   }
-  

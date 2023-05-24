@@ -7,6 +7,13 @@
     "department": "CSE"
   },
   {
+    "id": 7,
+    "username": "a3",
+    "password": "a3",
+    "role": "advisor",
+    "department": "MBA"
+  },
+  {
     "id": 6,
     "username": "a2",
     "password": "a2",

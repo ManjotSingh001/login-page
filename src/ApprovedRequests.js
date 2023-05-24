@@ -5,22 +5,27 @@ import './ApprovedRequests.css';
 
 const ApprovedRequests = () => {
   const [requests, setRequests] = useState([]);
+  const department = localStorage.getItem('department');
 
   useEffect(() => {
-    axios
-      .get('http://localhost:3001/api/approved-requests')
-      .then((response) => {
-        setRequests(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
+    if (department) {
+      axios
+        .get(`http://localhost:3001/api/approved-requests?department=${department}`)
+        .then((response) => {
+          setRequests(response.data);
+        })
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+        });
+    }
+  }, [department]);
 
   return (
     <div className="approved-requests">
       <Navbar />
-      <h1><b>Approved Requests</b></h1>
+      <h1>
+        <b>Approved Requests</b>
+      </h1>
       <table>
         <thead>
           <tr>
@@ -28,7 +33,6 @@ const ApprovedRequests = () => {
             <th>Father Name</th>
             <th>URN</th>
             <th>CRN</th>
-            <th>department</th>
             <th>Date</th>
           </tr>
         </thead>
@@ -39,7 +43,6 @@ const ApprovedRequests = () => {
               <td>{request.fatherName}</td>
               <td>{request.URN}</td>
               <td>{request.CRN}</td>
-              <td>{request.department}</td>
               <td>{new Date(request.createdAt).toLocaleDateString()}</td>
             </tr>
           ))}

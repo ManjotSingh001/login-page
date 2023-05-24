@@ -21,4 +21,17 @@
     text-align: left;
   }
   
- 
+  .action-buttons button {
+    background-color: #303030;
+    color: #d9d9d9;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .action-buttons button:hover {
+    background-color: #d9d9d9;
+    color: #303030;
+  }

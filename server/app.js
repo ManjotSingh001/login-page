@@ -64,6 +64,7 @@ app.get('/api/data', async (req, res) => {
     res.status(500).json({ error: 'An error occurred while fetching data' });
   }
 });
+
 app.post('/api/generate-request', async (req, res) => {
   const { studentId, requestDetails, fatherName, URN, CRN, department } = req.body;
 
@@ -87,11 +88,10 @@ app.post('/api/generate-request', async (req, res) => {
   }
 });
 
-
 app.get('/api/pending-requests', async (req, res) => {
   try {
     const requestsCollection = client.db('req').collection('pending');
-    const pendingRequests = await requestsCollection.find({ status: 'pending' }).toArray();
+    const pendingRequests = await requestsCollection.find({ department: req.query.department, status: 'pending' }).toArray();
 
     res.status(200).send(pendingRequests);
   } catch (error) {
@@ -99,7 +99,6 @@ app.get('/api/pending-requests', async (req, res) => {
     res.status(500).send('Error fetching pending requests');
   }
 });
-
 
 app.post("/api/approve-requests", async (req, res) => {
   const requestIds = req.body.requestIds;
@@ -125,17 +124,18 @@ app.post("/api/approve-requests", async (req, res) => {
   }
 });
 
-app.get("/api/approved-requests", async (req, res) => {
+app.get('/api/approved-requests', async (req, res) => {
+  const department = req.query.department;
   try {
-    const approvedRequestsCollection = client.db("req").collection("approved_requests");
-    const approvedRequests = await approvedRequestsCollection.find().toArray();
-
+    const approvedRequestsCollection = client.db('req').collection('approved_requests');
+    const approvedRequests = await approvedRequestsCollection.find({ department }).toArray();
     res.status(200).send(approvedRequests);
   } catch (error) {
-    console.error("Error fetching approved requests:", error);
-    res.status(500).send("Error fetching approved requests");
+    console.error('Error fetching approved requests:', error);
+    res.status(500).send('Error fetching approved requests');
   }
 });
+
 
 app.post('/api/pause-requests', async (req, res) => {
   const requestIds = req.body.requestIds;
@@ -162,17 +162,18 @@ app.post('/api/pause-requests', async (req, res) => {
 });
 
 app.get('/api/paused-requests', async (req, res) => {
+  const department = req.query.department;
   try {
     const pausedRequestsCollection = client.db('req').collection('paused');
-    const pausedRequests = await pausedRequestsCollection.find().toArray();
-
+    const pausedRequests = await pausedRequestsCollection.find({ department }).toArray();
     res.status(200).send(pausedRequests);
   } catch (error) {
     console.error('Error fetching paused requests:', error);
     res.status(500).send('Error fetching paused requests');
   }
 });
-//added for pause approve
+
+
 app.post("/api/approved-requests-from-paused", async (req, res) => {
   const requestIds = req.body.requestIds;
 
@@ -200,7 +201,6 @@ app.post("/api/approved-requests-from-paused", async (req, res) => {
   }
 });
 
-
 app.get("/api/approved-requests-from-paused", async (req, res) => {
   try {
     const approvedRequestsCollection = client.db("req").collection("approved_requests");
@@ -212,9 +212,6 @@ app.get("/api/approved-requests-from-paused", async (req, res) => {
     res.status(500).send("Error fetching approved requests");
   }
 });
-
-
-//api to revert the paused requests back to pending
 
 app.post('/api/revert-requests', async (req, res) => {
   const requestIds = req.body.requestIds;
@@ -242,7 +239,7 @@ app.post('/api/revert-requests', async (req, res) => {
     res.status(500).send('Error reverting the request');
   }
 });
- 
+
 app.get('/api/paused-requests', async (req, res) => {
   try {
     const pausedRequestsCollection = client.db('req').collection('paused');
@@ -255,8 +252,7 @@ app.get('/api/paused-requests', async (req, res) => {
   }
 });
 
-
 const PORT = process.env.PORT || 3001;
-app.listen(3001, () => {
+app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
