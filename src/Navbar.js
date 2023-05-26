@@ -7,9 +7,9 @@ const Navbar = () => {
       <div className={styles.wrapper}>
         <nav>
           <ul className={styles['nav-items']}>
-            <li>
+            {/* <li>
               <a href="/"> HOME</a>
-            </li>
+            </li> */}
             <li>
               <a href="https://www.gndec.ac.in/">COLLEGE WEBSITE</a>
             </li>

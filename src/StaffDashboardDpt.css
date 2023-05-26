@@ -1,4 +1,4 @@
-/* AdvisorDashboard.css */
+/* staffdashboarddpt.css */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
@@ -19,14 +19,14 @@ body {
 
 
 
-.advisor-dashboard .header-container {
+.staff-dashboard-dpt .header-container {
     height: calc(101.45vh - 72px);
     display: flex;
     align-items: center;
   }
   
 
-  .advisor-dashboard header {
+  .staff-dashboard-dpt header {
     /* margin-left: 10%; */
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@ body {
     border-radius: 15px;
   }
 
-  .advisor-dashboard header h1 {
+  .staff-dashboard-dpt header h1 {
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
@@ -51,7 +51,7 @@ body {
     margin-top: 10px;
   }
 
-  .advisor-dashboard header a {
+  .staff-dashboard-dpt header a {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -71,12 +71,9 @@ body {
   margin-bottom: 12px;
 }
 
-.advisor-dashboard .hero-content {
+.staff-dashboard-dpt .hero-content {
   text-align: center;
   align-items: center;
   margin-left: -63px;
 }
 
-/* .header-container {
-  padding-top: 50px;
-} */

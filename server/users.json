@@ -54,7 +54,19 @@
     "id": 5,
     "username": "st1",
     "password": "st1",
-    "role": "staff",
-    "department": "CSE"
+    "role": "staff"
+  },
+  {
+    "id": 8,
+    "username": "st2",
+    "password": "st2",
+    "role": "staff"
+  }
+  ,
+  {
+    "id": 9,
+    "username": "st3",
+    "password": "st3",
+    "role": "staff"
   }
 ]

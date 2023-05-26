@@ -8,6 +8,7 @@ import LoginPage from './LoginPage';
 import PendingRequests from './PendingRequests'; // Import the new PendingRequests component
 import ApprovedRequests from './ApprovedRequests';
 import PausedRequests from './PausedRequests';
+import StaffDashboardDpt from './StaffDashboardDpt';
 
 function App() {
   return (
@@ -21,6 +22,17 @@ function App() {
           <Route path="/pending-requests" element={<PendingRequests />} /> {/* Add a route for the PendingRequests component */}
           <Route path="/approved-requests" element={<ApprovedRequests />} />
           <Route path="/paused-requests" element={<PausedRequests />} />
+          <Route path="/dpt-ce" element={<StaffDashboardDpt />} />
+          <Route path="/dpt-ee" element={<StaffDashboardDpt />} />
+          <Route path="/dpt-me-pro" element={<StaffDashboardDpt />} />
+          <Route path="/dpt-ece" element={<StaffDashboardDpt />} />
+          <Route path="/dpt-it" element={<StaffDashboardDpt />} />
+          <Route path="/dpt-mba" element={<StaffDashboardDpt />} />
+          <Route path="/dpt-bca" element={<StaffDashboardDpt />} />
+          <Route path="/st-req-pending" element={<PendingRequests />} /> {/* Add a route for the PendingRequests component */}
+          <Route path="/st-req-approved" element={<ApprovedRequests />} />
+          <Route path="/st-req-paused" element={<PausedRequests />} />
+
         </Routes>
       </Router>
     </div>

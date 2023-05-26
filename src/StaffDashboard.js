@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './StaffDashboard.css';
 import Navbar from './Navbar';
 
@@ -13,14 +14,14 @@ const StaffDashboard = () => {
             <div className="hero-content">
               <h1>Welcome,</h1>
               {/* <h2>Manjot Singh</h2> */}
-              <a href="requests-ce.html">CE</a>
-              <a href="requests-ee.html">EE</a>
-              <a href="requests-mech&pro.html">ME & PRO</a>
-              <a href="requests-ece.html">ECE</a>
-              <a href="requests-cse.html">CSE</a>
-              <a href="requests-mba.html">MBA</a>
-              <a href="requests-it.html">IT</a>
-              <a href="requests-bca.html">BCA</a>
+              <Link to="/dpt-ce">CE</Link>
+              <Link to="/dpt-ee">EE</Link>
+              <Link to="/dpt-me-pro">ME & PRO</Link>
+              <Link to="/dpt-ece">ECE</Link>
+              <Link to="/dpt-cse">CSE</Link>
+              <Link to="/dpt-it">IT</Link>
+              <Link to="/dpt-mba">MBA</Link>
+              <Link to="/dpt-bca">BCA</Link>
             </div>
             <div className="photo-bg"></div>
           </header>
